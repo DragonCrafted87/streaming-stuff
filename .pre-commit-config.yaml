@@ -1,0 +1,44 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: fix-byte-order-marker
+    -   id: fix-encoding-pragma
+    -   id: mixed-line-ending
+        args:
+        -   --fix=lf
+    -   id: check-yaml
+    -   id: check-added-large-files
+-   repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    -   id: pretty-format-yaml
+        args:
+        -   --autofix
+        -   --indent
+        -   '4'
+-   repo: https://github.com/DragonCrafted87/mdformat
+    rev: 0dfc50bdf4c5fc4c171e025a1c7f920e141ba0c5
+    hooks:
+    -   id: mdformat
+        args:
+        -   --end-of-line
+        -   lf
+        additional_dependencies:
+        -   mdformat-gfm
+        -   mdformat-black
+-   repo: https://github.com/adrienverge/yamllint
+    rev: v1.26.1
+    hooks:
+    -   id: yamllint
+-   repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.27.1
+    hooks:
+    -   id: markdownlint
+-   repo: https://github.com/redwarp/optimize-png-hooks
+    rev: v1.0.0
+    hooks:
+    -   id: optimize-png
+        args: [--zopfli]
