@@ -19,8 +19,8 @@ repos:
         -   --autofix
         -   --indent
         -   '4'
--   repo: https://github.com/DragonCrafted87/mdformat
-    rev: 0dfc50bdf4c5fc4c171e025a1c7f920e141ba0c5
+-   repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.7
     hooks:
     -   id: mdformat
         args:
